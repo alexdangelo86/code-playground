@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const InputButton = ({ inputValue = '', onAdd }) => {
-    const [value, setValue] = useState("")
+    const [value, setValue] = useState(inputValue)
 
     const handleAdd = () => {
         setValue('')
