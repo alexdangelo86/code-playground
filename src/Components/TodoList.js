@@ -2,15 +2,27 @@ import React, { useState } from "react";
 import InputButton from './InputButton';
 import "./TodoList.css";
 
-const TodoItem = ({item, onDelete, index}) => {
+const TodoItem = ({item, onDelete, index, onEdit}) => {
     const [ editMode, SetEditMode] = useState (false)
 
     const handleToggle = () => {
         SetEditMode(!editMode)
     }
+
+    
+    
     return (
-        <div className="todo-item" onClick={handleToggle}>
-            {editMode ? (<InputButton inputValue={item}/>) : <div onCLick={handleToggle}>(item)</div>} 
+        <div className="todo-item" >
+            {editMode ? (
+                <InputButton
+                    inputValue={item}
+                    onAdd= {(value) => {
+                        onEdit(value) 
+                        SetEditMode(false)
+                    }}
+                        
+                /> 
+             ) : <div onClick={handleToggle}>{item}</div>} 
             <button 
             className='delete-button'
                 onClick={() => onDelete(index)}
@@ -33,6 +45,12 @@ export const TodoList = () => {
         setData(newData)
     }
 
+    const handleEdit = (value, index) => {
+        const newData = JSON.parse(JSON.stringify(data))
+        newData[index] = value
+        setData(newData)
+    }
+
     return (
         <div className="todo-box"> 
             <div className="header">
@@ -40,7 +58,12 @@ export const TodoList = () => {
             </div> 
             {data.map((item, index) => {
                 return (
-                    <TodoItem item={item} onDelete={handleDelete} index={index} />
+                    <TodoItem 
+                    item={item} 
+                    onDelete={handleDelete} 
+                    index={index}
+                    onEdit={(value) => handleEdit(value, index)}
+                     />
                 )   
             })}         
         </div>
