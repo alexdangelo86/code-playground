@@ -1,5 +1,5 @@
 .todo-box { 
-    background: rgb(192, 131, 141);
+    background: rgb(150, 131, 192);
     border: 1px solid gray;
     border-radius: 6px;
     margin: 30px;
@@ -39,7 +39,7 @@
 }
 
 .delete-button{
-    background: orange;
+    background: rgb(180, 181, 178);
     color: white;
     font-weight: bold;
     border-radius: 50%;
