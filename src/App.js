@@ -1,16 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-import {TodoList} from "./Components/TodoList";
+import React from 'react'
+import logo from './logo.svg'
+import './App.css'
+import { TodoList } from './Components/TodoList'
+import Sidebar from './Components/Sidebar'
 
 function App() {
   return (
     <div className="App">
-      
+      <Sidebar/>
       <TodoList/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
 
 

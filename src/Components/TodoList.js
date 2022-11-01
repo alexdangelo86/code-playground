@@ -10,7 +10,6 @@ const TodoItem = ({ item, onDelete, index, onEdit }) => {
   }
 
     
-    
   return (
     <div className="todo-item  " >
       {editMode ? (
