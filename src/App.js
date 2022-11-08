@@ -4,6 +4,7 @@ import { TodoList } from './Components/TodoList'
 import Sidebar from './Components/Sidebar'
 import { Box } from '@mui/material'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import BasicFrom from './Components/BasicForm'
 
 const siteData = [
   { name: 'Todo List', route: '/todo-list' },
@@ -21,6 +22,7 @@ function App() {
         <Sidebar items={siteData} />
         <Routes>
           <Route path="/todo-list" element={<TodoList />} />
+          <Route path="/todo-list" element={<BasicFrom />} />
         </Routes>
       </Box>
     </Router>
