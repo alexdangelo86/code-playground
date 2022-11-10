@@ -20,10 +20,21 @@ function App() {
         }}
       >
         <Sidebar items={siteData} />
-        <Routes>
-          <Route path="/todo-list" element={<TodoList />} />
-          <Route path="/todo-list" element={<BasicFrom />} />
-        </Routes>
+
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-around',
+            flex: 1,
+          }}
+          Routes
+        >
+          <Routes>
+            <Route path="/todo-list" element={<TodoList />} />
+            <Route path="/basic-form" element={<BasicFrom />} />
+          </Routes>
+        </Box>
       </Box>
     </Router>
   )
