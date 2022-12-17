@@ -28,7 +28,7 @@ const Images = () => {
         <Typography color="white" variant="h2" fontSize={70}>
           MIDNIGHT TREAT
         </Typography>
-        <Typography color="white" variant="h3">
+        <Typography color="white" variant="h4">
           Alex D&apos;Angelo & Stretch the Producer
         </Typography>
       </Box>

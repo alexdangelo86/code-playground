@@ -6,11 +6,13 @@ import { Box } from '@mui/material'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import BasicFrom from './Components/BasicForm'
 import Images from './Components/Images'
+import Xmas from './Components/xmas'
 
 const siteData = [
   { name: 'Todo List', route: '/todo-list', element: <TodoList /> },
   { name: 'Basic Form', route: '/basic-form', element: <BasicFrom /> },
   { name: 'Images', route: '/images', element: <Images /> },
+  { name: 'xmas', route: '/xmas', element: <Xmas /> },
 ]
 
 function App() {
