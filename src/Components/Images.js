@@ -29,7 +29,7 @@ const Images = () => {
           <iframe
             width="640"
             height="360"
-            src="https://www.youtube.com/embed/https:/CRLJSJn97GI"
+            src="https://www.youtube.com/embed/CRLJSJn97GI"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>

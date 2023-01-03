@@ -1,8 +1,6 @@
 /* eslint-disable indent */
 const initialState = {
   list: [],
-  open: false,
-  userName: '',
 }
 
 export default function (state = initialState, action) {
@@ -10,7 +8,7 @@ export default function (state = initialState, action) {
     case 'SET_LIST':
       return {
         ...state,
-        list: action.payload,
+        list: [...state.list, action.payload],
       }
     case 'SET_OPEN':
       return {
