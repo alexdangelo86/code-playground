@@ -9,30 +9,29 @@ const InputButton = ({ inputValue = '', onAdd }) => {
   }
 
   const handleChange = (e) => {
-    setValue (e.target.value)
+    setValue(e.target.value)
   }
 
   const handleKeyPress = (e) => {
-    if (e.key === 'Enter'){
+    if (e.key === 'Enter') {
       handleAdd()
-
     }
   }
-   
 
   return (
     <div>
-      <input 
-        value={value} 
+      <input
+        value={value}
         onKeyPress={handleKeyPress}
-        onChange={handleChange}  
-        className="input" 
-        type="text"/>
-      <button onClick={handleAdd}  className="button">Add</button>
+        onChange={handleChange}
+        className="input"
+        type="text"
+      />
+      <button onClick={handleAdd} className="button">
+        Add
+      </button>
     </div>
   )
-
 }
 
 export default InputButton
-    

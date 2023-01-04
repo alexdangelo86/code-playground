@@ -63,7 +63,7 @@ const Xmas = () => {
 
       {list.map((item, index) => {
         return (
-          <Box key={index}>
+          <Box key={index} sx={{ marginInline: '15px' }}>
             {item.guestName} / {item.numberOfGuests} / {item.date}
           </Box>
         )
