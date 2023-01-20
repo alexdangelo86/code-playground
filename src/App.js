@@ -7,12 +7,14 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import BasicFrom from './Components/BasicForm'
 import Images from './Components/Images'
 import Xmas from './Components/xmas'
+import Excercise from './Components/excercise'
 
 const siteData = [
   { name: 'Todo List', route: '/todo-list', element: <TodoList /> },
   { name: 'Basic Form', route: '/basic-form', element: <BasicFrom /> },
   { name: 'Images', route: '/images', element: <Images /> },
   { name: 'xmas', route: '/xmas', element: <Xmas /> },
+  { name: 'Excercise', route: '/excercise.', element: <Excercise /> },
 ]
 
 function App() {
