@@ -4,34 +4,26 @@ import React from 'react'
 import { useState } from 'react'
 
 const Excercise = () => {
-  const [name, setName] = useState('Primeiro exercicio')
-  const [number, setNumber] = useState(0)
-
   const handleClick = () => {
-    setName('Vamos pro segundo')
-    setNumber(number + 1)
-    alert('clicked')
+    alert('clicked button 1')
+  }
+  const handleClick2 = () => {
+    alert('clicked button 1')
+  }
+  const handleClick3 = () => {
+    alert('clicked button 1')
   }
   return (
     <div>
       <Box
         sx={{
           display: 'flex',
-          alignItems: 'center',
-          width: '100%',
-          height: '20px',
-          background: 'yellow',
-          padding: '50%',
-          borderRadius: '10%',
-          border: '4px solid',
+          alignItems: 'flex-end',
         }}
       >
-        <h1>
-          {name} and the {number}
-        </h1>
-
-        <button onClick={handleClick}> Click Me!</button>
-        <button onClick={handleClick}> Clik me Too</button>
+        <button onClick={handleClick}> Button 1 </button>
+        <button onClick={handleClick2}> Button 2</button>
+        <button onClick={handleClick3}> Button 3</button>
       </Box>
     </div>
   )
